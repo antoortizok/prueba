@@ -1,0 +1,262 @@
+/* Le pongo 100% al body para que tome el 100% verticalmente 
+y me use toda la pagine de punta a punta */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: wheat;
+}
+
+/* styling the header */
+
+/* Aca le doy un alto al header en este caso 100px */
+.header {
+    height: 100px;
+    background: lightgray;
+}
+
+/* Aca le digo al contenedor que cree para el logo que se tire para la izquierda con float:left 
+y le doy un ancho y alto y margen para que tenga espacio en los costados*/
+.header>.logo {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 20px 10px 10px 50px;
+    text-align: center;
+}
+
+/* Aca a la imagen que le voy a meter al logo le doy un ancho y alto*/
+.logo>img {
+    width: 50px;
+    height: 80px;
+}
+
+/* Aca le digo al contenedor que cree para el navigator que se tire para 
+la derecha con float:right */
+.header>.nav-header {
+    float: right;
+}
+
+.nav-header>ul {
+    display: inline-block;
+    font-family: Arial, Verdana;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    height: 100px;
+    background: #1e7c9a;
+}
+
+.nav-header>ul li {
+    display: block;
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+}
+
+.nav-header>ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    margin-left: 1px;
+    white-space: nowrap;
+    margin-top: 35px;
+}
+
+/* Aca lo que hago con el hover es que cuando pasas el mouse 
+por arriba cambie al background color indicado */
+.nav-header>ul :hover {
+    background: #3b3b3b;
+}
+
+/* Aca le digo al div que usa la clase content que me use todo el ancho */
+.content {
+    width: 100%;
+}
+
+/* Aca le digo al div que usa la clase content-first dentro de content
+ que me tenga un background color lightblue, el text-align: center 
+ es para que me alinie el contenido dentro de content-first en el centro
+ y despues el padding bottom para que no quede pegado el contenido a lo de abajo */
+
+.content>.content-first {
+    background-color: wheat;
+    text-align: center;
+    padding-bottom: 10px;
+    margin: auto;
+    width: 50%;
+   
+}
+
+/* Aca lo que hago es darle un background color lightcoral al content-second */
+.content>.content-second {
+    background-color: wheat;
+}
+
+/* Aca lo que hago es al img dentro de content-first que me use todo el ancho,
+un alto de 300px y unos paddings para que no quede pegado con el contenido
+de arriba y abajo */
+
+.content-first>img {
+    width: 70%;
+    height: 900px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Aca lo que hago es al article dentro de content-first que me use todo el ancho,
+un alto de 100px, quizas podria agregarle unos paddings tmb */
+
+.content-first>article {
+    width: 100%;
+    height: 100px;
+}
+/* 
+Aca le digo al parrafo dentro del articulo que tenga unos margenes al costado
+para que no quede pegado a los bordes de la pantalla */
+.content-first>article>p {
+    margin-right: 250px;
+    margin-left: 250px;
+}
+/* 
+Aca le digo al botton debajo del parrafo que tenga un ancho de 100px, un alto de 30px
+un color, y cursor: pointer es para que cuando pasas el mouse por arriba
+el mouse sea una manito */
+
+.content-first>button {
+    width: 100px;
+    height: 30px;
+    background: lightblue;
+    cursor: pointer;
+}
+/* 
+Aca le digo que cuando pasas el mouse por arriba :hover del botton 
+cambie el color a gris */
+.content-first>button:hover {
+    background: grey;
+}
+
+/* 
+Aca le digo a content-wrapper-first que me use todo el ancho, un alto de 300px y unos paddings 
+*/ 
+.content-second>.content-wrapper-first {
+    height: 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 
+Aca le digo a la img dentro de content-wrapper-first que me se vaya a la izquierda,
+un ancho y alto y unos paddings para colocarlo donde quiero
+*/ 
+.content-wrapper-first>img {
+    float: left;
+    width: 600px;
+    height: 400px;
+    padding: 40px 40px 40px 40px;
+}
+
+/* 
+Lo mismo que arriba pero con article
+*/ 
+.content-wrapper-first>article {
+    float: right;
+    width: 550px;
+    padding: 40px 40px 40px 40px;
+}
+
+
+/* 
+Lo mismo que .content-wrapper-first
+*/ 
+.content-wrapper-second {
+    height: 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content-wrapper-second>img {
+    float: right;
+    width: 600px;
+    height: 400px;
+    padding: 40px 40px 40px 40px;
+}
+
+.content-wrapper-second>article {
+    float: left;
+    width: 550px;
+    padding: 40px 40px 40px 40px;
+}
+
+/* styling content layout */
+.colA,
+.colB,
+.colC {
+    float: left;
+    width: 31%;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+
+.colB {
+    text-align: center;
+    background: lightgray;
+
+}
+
+.footer {
+    height: 50px;
+}
+
+/* media query settings for responsive website */
+
+/* size for tablets, setting it to 50% will create 2 columns */
+@media screen and (max-width:600px) {
+
+    .colA,
+    .colB,
+    .colC {
+        width: 50%
+    }
+}
+
+/* size for cellphones, setting it to 100% will create 1 column */
+@media screen and (max-width:400px) {
+
+    .colA,
+    .colB,
+    .colC {
+        width: 100%
+    }
+}
+
+.content-instagram img {
+    height: 25px;
+    width: 25px;
+    margin: auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.footer img {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clear {
+    clear:both
+}

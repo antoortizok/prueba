@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+header {
+    background-color: red;
+}
+
+nav {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4em;
+    align-content: center;
+    align-items: center;
+}
+
+.Nav--Section__Contenedorenlaces--enlaces
+{
+    color: white;
+    text-decoration: none;
+    margin: 1em;
+}
